@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@500&display=swap");
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("images/main-image.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.header-container {
+  /* margin: 20px 0; */
+  width: 100vw;
+  /* border: 1px solid red; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Class for hiding elements for mobile view */
+.hide {
+  display: none;
+}
+
+.logo {
+  /* background-color: #6a6a6a; */
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px 0 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  color: #3d3d3d;
+  z-index: 10;
+  /* color: #fff; */
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#hamburger-container {
+  /* border: 1px solid red; */
+  margin-right: 20px;
+}
+
+.hamburger-bar1,
+.hamburger-bar2,
+.hamburger-bar3 {
+  z-index: 10;
+  width: 35px;
+  height: 5px;
+  background-color: #3d3d3d;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.toggle-hamburger .hamburger-bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.toggle-hamburger .hamburger-bar2 {
+  opacity: 0;
+}
+
+.toggle-hamburger .hamburger-bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.side-menu-container {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+}
+
+.side-menu-position {
+  padding-top: 25px;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.side-menu-styles {
+  background-color: #611f69;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/sidebar-background.png");
+  background-size: 1300px 700px;
+  background-repeat: repeat;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+}
+
+.show-side-menu {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.thumbnails-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnails {
+  margin: 10px;
+  display: block;
+  border: 1px solid red;
+  height: 50vh;
+  width: 50vw;
+}
